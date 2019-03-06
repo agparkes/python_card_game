@@ -11,11 +11,8 @@ class Deck:
     def __init__(self):
         suits      = ["Lion", "Bear", "Wolf", "Gorilla"]
         values     = ["Emerald", "Diamond", "Ruby", "Sapphire", "Star", "Moon", "Fire", "Wind", "Earth", "Thunder", "Lightling", "Safe"]
-        self.cards = []        
-        for suit in suits:
-            for value in values:
-                print(Card(value, suit))
-                
+        self.cards = [Card(value, suit) for suit in suits for value in values] 
+        
         print(self.cards)
         
 d = Deck()
